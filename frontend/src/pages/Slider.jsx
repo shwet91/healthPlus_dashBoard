@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Navbar Component
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate()
   
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +34,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <a href=" "
              className={`font-medium bg-rose-800 p-2 rounded-xl text-3xl hover:bg-rose-950 transition ${scrolled ? 'text-dblue-700' : 'text-white'}`}>Home</a>
-              <a href="/profile"
+              <a onClick={() => navigate("/profile")}
              className={`font-medium bg-rose-800 p-2 rounded-xl text-3xl hover:bg-rose-950 transition ${scrolled ? 'text-bdlue-700' : 'text-white'}`}>Profile</a>
           </div>
           
