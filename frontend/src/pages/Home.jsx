@@ -15,7 +15,7 @@ useEffect(() => {
   const asyncFunction = async() => {
    try {
     console.log("started")
-     const fetchUserData = await fetch( "http://localhost:8000/api/v1/user/getUserDetails/67f74711d73cc2fe2907f54b"  , {
+     const fetchUserData = await fetch( "https://healthplus-dashboard.onrender.com/api/v1/user/getUserDetails/67f74711d73cc2fe2907f54b"  , {
        method : "GET"
      }).then((res) => res.json())
    
