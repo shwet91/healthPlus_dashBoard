@@ -9,7 +9,7 @@ function App() {
    <div className='w-screen h-screen bg-pink-100'>
   
        <Outlet></Outlet>
-       <button onClick={() => navigate("/home")}>Start Demo</button>
+       <button className='m-28 bg-cyan-400 p-4 rounded-2xl' onClick={() => navigate("/home")}>Start Demo</button>
    </div>
   )
 }
